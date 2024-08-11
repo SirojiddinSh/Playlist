@@ -36,11 +36,11 @@ const RecentlyPlayed = () => {
     };
     return (
         <div className="YMRJU">
-            {playlists?.map((playlist) => (
+            {playlists?.map((playlist, index) => (
                 <div
                     style={{ cursor: "pointer" }}
                     onClick={() => sendPlaylist(playlist)}
-                    key={playlist}
+                    key={playlist.id || index}
                     className="YMRJU-item"
                 >
                     <img
