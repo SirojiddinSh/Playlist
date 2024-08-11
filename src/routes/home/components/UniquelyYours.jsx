@@ -36,19 +36,19 @@ const UniquelyYours = () => {
     };
     return (
         <div className="YMRJU">
-            {playlists?.map((playlist, index) => (
+            {playlists?.map((playlist) => (
                 <div
                     style={{ cursor: "pointer" }}
                     onClick={() => sendPlaylist(playlist)}
-                    key={playlist.id || index}
+                    key={playlist?.id}
                     className="YMRJU-item"
                 >
                     <img
-                        src={playlist.images[0].url}
-                        alt={playlist.name}
+                        src={playlist?.images[0].url}
+                        alt={playlist?.name}
                         className="YMRJU-image"
                     />
-                    <h3 className="YMRJU-title">{playlist.name}</h3>
+                    <h3 className="YMRJU-title">{playlist?.name}</h3>
                 </div>
             ))}
         </div>

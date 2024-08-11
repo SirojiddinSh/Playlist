@@ -17,10 +17,14 @@ const JumpBackIn = () => {
                     },
                 }
             );
-            const { playlists } = await response.json();
-            setPlaylists(playlists.items);
+            const data = await response.json();
+            if (data.playlists && data.playlists.items) {
+                setPlaylists(data.playlists.items);
+            } else {
+                console.error("Playlists data is missing in the response.");
+            }
         } catch (error) {
-            console.log(error);
+            console.error("Error fetching playlists:", error);
         }
     };
 
@@ -36,19 +40,19 @@ const JumpBackIn = () => {
     };
     return (
         <div className="YMRJU">
-            {playlists?.map((playlist, index) => (
+            {playlists?.map((playlist) => (
                 <div
                     style={{ cursor: "pointer" }}
                     onClick={() => sendPlaylist(playlist)}
-                    key={playlist.id || index}
+                    key={playlist.id}
                     className="YMRJU-item"
                 >
                     <img
-                        src={playlist.images[0].url}
-                        alt={playlist.name}
+                        src={playlist?.images[0].url}
+                        alt={playlist?.name}
                         className="YMRJU-image"
                     />
-                    <h3 className="YMRJU-title">{playlist.name}</h3>
+                    <h3 className="YMRJU-title">{playlist?.name}</h3>
                 </div>
             ))}
         </div>
