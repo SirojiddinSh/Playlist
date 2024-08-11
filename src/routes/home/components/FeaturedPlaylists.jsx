@@ -37,10 +37,10 @@ const FeaturedPlaylists = () => {
 
     return (
         <div className="featured-playlist">
-            {playlists?.map((playlist) => (
+            {playlists?.map((playlist, index) => (
                 <div
                     onClick={() => sendPlaylist(playlist)}
-                    key={playlist.id}
+                    key={playlist.id || index}
                     className="featured-playlist-item"
                 >
                     <img

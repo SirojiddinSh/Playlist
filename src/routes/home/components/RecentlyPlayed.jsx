@@ -40,7 +40,7 @@ const RecentlyPlayed = () => {
                 <div
                     style={{ cursor: "pointer" }}
                     onClick={() => sendPlaylist(playlist)}
-                    key={playlist.id}
+                    key={playlist}
                     className="YMRJU-item"
                 >
                     <img

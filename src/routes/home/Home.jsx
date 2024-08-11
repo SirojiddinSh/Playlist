@@ -3,7 +3,7 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import FeaturedPlaylists from "./components/FeaturedPlaylists";
 import YourTopMixes from "./components/YourTopMixes";
 import MadeForYou from "./components/MadeForYou";
-import RecentPlayed from "./components/RecentlyPlayed";
+import RecentlyPlayed from "./components/RecentlyPlayed";
 import JumpBackIn from "./components/JumpBackIn";
 import UniquelyYours from "./components/UniquelyYours";
 
@@ -37,7 +37,7 @@ const Home = () => {
             <div style={{ width: "100%" }}>
                 <h2 className="home-title">Recently played</h2>
             </div>
-            <RecentPlayed />
+            <RecentlyPlayed />
             <div style={{ width: "100%" }}>
                 <h2 className="home-title">Jump back in</h2>
             </div>
