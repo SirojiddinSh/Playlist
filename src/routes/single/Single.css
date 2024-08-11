@@ -1,0 +1,110 @@
+.single {
+    width: 100%;
+    background-color: #121212;
+}
+
+.single_header {
+    width: 100%;
+    height: 80px;
+    background: rgba(221, 246, 40, 1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+.single_header button {
+    width: 40px;
+    height: 40px;
+    background: rgb(83, 81, 81);
+    border-radius: 50%;
+    border: none;
+}
+
+.single_bg-div {
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(180deg, #def628 5.09%, #121212 43.28%);
+}
+
+.single_container {
+    width: 100%;
+    height: 297px;
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.single_like {
+    width: 297px;
+    height: 297px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.single_songs_info {
+    width: 800px;
+    height: 220px;
+    margin-bottom: 45px;
+}
+
+.single_songs_info h4 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.24px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.single_songs_info h1 {
+    width: 800px;
+    height: 180px;
+    font-family: sans-serif;
+    font-size: 122px;
+    font-weight: 900;
+    line-height: 154.33px;
+    letter-spacing: -0.06em;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 25px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.single_songs_info h1::-webkit-scrollbar {
+    height: 5px;
+}
+
+.single_songs_info h1::-webkit-scrollbar-thumb {
+    background: #928dab;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.single_songs_info h1::-webkit-scrollbar-thumb:hover {
+    background: #6e7f90;
+}
+
+.single_songs_info h3 {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.77px;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.liked-playlist-duration {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 22.77px;
+    letter-spacing: 0.01em;
+    color: rgba(179, 179, 179, 1);
+    margin-left: 50px;
+}

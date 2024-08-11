@@ -13,7 +13,7 @@ const { Sider } = Layout;
 
 const Navbar = () => {
     return (
-        <div style={{ width: "310px", height: "100%" }}>
+        <div style={{ width: "310px" }}>
             <div
                 style={{
                     width: "310px",
@@ -147,6 +147,7 @@ const Navbar = () => {
                             background: "black",
                             paddingTop: "20px",
                             borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+                            marginBottom: "100px",
                         }}
                     >
                         <ul className="navbar_ul">

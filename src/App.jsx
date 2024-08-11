@@ -8,7 +8,8 @@ import Library from "./routes/library/Library";
 import LikedSongs from "./routes/likedSongs/LikedSongs";
 import CreatePlaylist from "./routes/createPlaylist/CreatePlaylist";
 import { CLIENT_ID, CLIENT_SECRET } from "./veraibls/veraibls";
-import FooterPlay from "./components/footerPlay/FooterPlay";
+import Player from "./components/player/Player";
+import Single from "./routes/single/Single";
 
 const getToken = async () => {
     try {
@@ -46,10 +47,11 @@ function App() {
                         element={<CreatePlaylist />}
                     />
                     <Route path="/Liked-Songs" element={<LikedSongs />} />
+                    <Route path="/playlist-info/:id" element={<Single />} />
                 </Routes>
                 <Settings />
             </div>
-            <FooterPlay />
+            <Player />
         </>
     );
 }

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const JumpBackIn = () => {
     const [playlists, setPlaylists] = useState([]);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const getPlaylists = async () => {
         try {
@@ -14,7 +18,6 @@ const JumpBackIn = () => {
                 }
             );
             const { playlists } = await response.json();
-            console.log(playlists.items);
             setPlaylists(playlists.items);
         } catch (error) {
             console.log(error);
@@ -24,10 +27,22 @@ const JumpBackIn = () => {
     useEffect(() => {
         getPlaylists();
     }, []);
+
+    const sendPlaylist = (playlist) => {
+        dispatch({ type: "SINGLE", payload: playlist });
+        dispatch({ type: "PLAY_PAUSE", payload: playlist });
+        dispatch({ type: "SET_PLAYING_TRACK", payload: Math.random() * 60 });
+        navigate(`/playlist-info/${playlist.id}`);
+    };
     return (
         <div className="YMRJU">
             {playlists?.map((playlist) => (
-                <div key={playlist.id} className="YMRJU-item">
+                <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => sendPlaylist(playlist)}
+                    key={playlist.id}
+                    className="YMRJU-item"
+                >
                     <img
                         src={playlist.images[0].url}
                         alt={playlist.name}

@@ -6,7 +6,7 @@ import {
 
 const Settings = () => {
     return (
-        <div style={{ height: "100%" }} className="settings">
+        <div className="settings">
             <div
                 style={{
                     display: "flex",

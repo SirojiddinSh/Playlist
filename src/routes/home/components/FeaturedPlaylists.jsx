@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const FeaturedPlaylists = () => {
     const [playlists, setPlaylists] = useState([]);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const getPlaylists = async () => {
         try {
@@ -23,10 +27,22 @@ const FeaturedPlaylists = () => {
     useEffect(() => {
         getPlaylists();
     }, []);
+
+    const sendPlaylist = (playlist) => {
+        dispatch({ type: "PLAY_PAUSE", payload: playlist });
+        dispatch({ type: "SET_PLAYING_TRACK", payload: Math.random() * 60 });
+        dispatch({ type: "SINGLE", payload: playlist });
+        navigate(`/playlist-info/${playlist.id}`);
+    };
+
     return (
         <div className="featured-playlist">
             {playlists?.map((playlist) => (
-                <div key={playlist.id} className="featured-playlist-item">
+                <div
+                    onClick={() => sendPlaylist(playlist)}
+                    key={playlist.id}
+                    className="featured-playlist-item"
+                >
                     <img
                         src={playlist.images[0].url}
                         alt={playlist.name}

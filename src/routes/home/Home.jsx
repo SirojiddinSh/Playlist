@@ -6,7 +6,6 @@ import MadeForYou from "./components/MadeForYou";
 import RecentPlayed from "./components/RecentlyPlayed";
 import JumpBackIn from "./components/JumpBackIn";
 import UniquelyYours from "./components/UniquelyYours";
-import FooterPlay from "../../components/footerPlay/FooterPlay";
 
 const Home = () => {
     return (
@@ -47,7 +46,6 @@ const Home = () => {
                 <h2 className="home-title">Uniquely yours</h2>
             </div>
             <UniquelyYours />
-            <FooterPlay />
         </div>
     );
 };
