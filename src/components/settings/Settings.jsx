@@ -75,8 +75,8 @@ const Settings = () => {
                 </div>
             </div>
             <p>
-                Go to Settings > Social and enable “Share my listening activity
-                on Spotify.’ You can turn this off at any time.
+                Go to Settings Social and enable “Share my listening activity on
+                Spotify.’ You can turn this off at any time.
             </p>
             <button className="settings-btn">SETTINGS</button>
         </div>
